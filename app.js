@@ -17,12 +17,14 @@ app.use(express.json());
 app.use('/customer', customer);
 // app.use(require('./middleware/validate-session'));
 
-app.get('*', (req, res) => {
-    res.status(404).send('nothing');
-})
+
 
 app.use('/test', function(req, res){
     res.send('This is a message from the endpoint on the server')
+})
+
+app.get('*', (req, res) => {
+    res.status(404).send('nothing');
 })
 
 app.listen(3001, function () {

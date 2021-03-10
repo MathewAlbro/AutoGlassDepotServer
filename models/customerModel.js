@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         last: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
             unique: false
         },
         phone: {
@@ -22,17 +22,17 @@ module.exports = function(sequelize, DataTypes) {
         },
         carMake: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
+            allowNull: true,
+            unique: false
         },
         carModel: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             unique: false
         },
         year: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             unique: false
         },
         insurance: {

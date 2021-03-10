@@ -4,7 +4,7 @@ const customer = require("../db").import("../models/customerModel");
 // const bcrypt = require("bcryptjs");
 const validateSession = require("../middleware/validate-session")
 
-router.post("/customer", function (req, res) {
+router.post("/", function (req, res) {
   customer.create({
     first: req.body.first,
     last: req.body.last,
